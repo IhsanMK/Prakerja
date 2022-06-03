@@ -15,6 +15,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="porto/portofolio.css" />
 
+  <link rel="icon" type="image/jpeg" href="porto/org.jpeg">
   <title>Portfolio Ihsan Maulana Kosasih</title>
 </head>
 
@@ -57,8 +58,7 @@
   <section id="Home" class="jumbotron jumbotron-fluid text-center text-sm-start">
     <h1 class="display-1 text-light">Hello!</h1>
     <p class="lead text-light">Ini Merupakan Landing Page Untuk Portofolio Saya Yang Pertama.</p>
-    <a class="btn btn-primary btn-lg btn-dark fst-italic" href="#About" role="button"
-      style="background-color: #1edbdb81 border:none;">Mari Berkenalan</a>
+    <a class="btn btn-primary btn-lg btn-dark fst-italic" href="#About" role="button">Mari Berkenalan</a>
   </section>
   <!-- Akhir Welcome -->
 
@@ -297,35 +297,7 @@
   </script>
 
   <!-- Script Ihsan -->
-  <script>
-    const scriptURL =
-      'https://script.google.com/macros/s/AKfycbw0JK9MS4MbGn0P0bgyJJHBTVS3paXxGx4gn4J2keEsv010s47EiLvNW8yCHouFt61rWQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const btnKirim = document.querySelector('.btn-kirim');
-    const btnLoading = document.querySelector('.btn-loading');
-    const puAlert = document.querySelector('.pu-alert');
-
-
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      btnLoading.classList.toggle('d-none');
-      btnKirim.classList.toggle('d-none');
-      fetch(scriptURL, {
-          method: 'POST',
-          body: new FormData(form)
-        })
-        .then(response => {
-          btnLoading.classList.toggle('d-none');
-          btnKirim.classList.toggle('d-none');
-          puAlert.classList.toggle('d-none');
-          form.reset();
-          console.log('Success!', response)
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-  <script src="portofolio.js"></script>
+  <script src="porto/portofolio.js"></script>
   <!-- akhir -->
 </body>
 

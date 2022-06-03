@@ -1,3 +1,8 @@
+#Home .btn {
+  border: none;
+  border-radius: 50px;
+}
+
 .jumbotron {
   padding-top: 15rem;
   background-size: cover;
